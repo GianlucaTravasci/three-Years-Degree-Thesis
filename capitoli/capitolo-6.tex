@@ -1,0 +1,47 @@
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = ../tesi.tex
+
+%**************************************************************
+
+\chapter{Verifica e validazione}
+\label{cap:verifica-validazione}
+%**************************************************************
+
+\section{Verifica}
+
+\subsection{Analisi statica}
+L'analisi statica fa uso di tecniche che non richiedono l'esecuzione del prodotto software, mirando ad avere un indice di qualità del codice tramite la lettura.
+\\
+L'analisi statica è stata applicata per tutta la durata del periodo di codifica, nei seguenti modi:
+\begin{itemize}
+    \item rileggendo innanzitutto attentamente il codice prodotto durante tutta la fase di codifica, facendo uso di tecniche come \emph{walkthrough}\glsfirstoccur e \emph{inspection}\glsfirstoccur;
+    
+    \item tenendo sotto controllo la qualità del codice grazie a Psalm.
+\end{itemize}
+
+\subsection{Analisi dinamica}
+L'analisi dinamica richiede l'esecuzione del prodotto software. Si avvale tipicamente di test progettati per essere utilizzabili nel momento in cui si effettua una modifica al software.
+\\
+Allo scopo di effettuare l'analisi dinamica, sono stati stesi ed effettuati dei test di unità sulle componenti, usando il framework per unit testing PHPUnit. 
+\\
+La procedura di unit testing e stata svolta nel seguente modo:
+\begin{itemize}
+    \item sono stati scritti dei brevi ma completi \textit{snippet} di codice che testino ogni funzionalità isolata, sia per quanto riguarda i casi di funzionamento corretto che quelli di funzionamento errato;
+    
+    \item sono stati raggruppati gli \textit{snippet} in TestCase;
+    
+    \item sono stati raggruppati i TestCase in TestSuite, che rappresentano una macro funzionalità rappresentata dal codice;
+    
+    \item infine è stato eseguito il codice di testing correggendo gli errori riscontrati ed assicurandosi che tutto il codice sia correttamente testato.
+\end{itemize}
+
+Sono stati inoltre eseguiti dei test funzionali, ovvero l'esecuzione dei casi d'uso previsti, simulando il comportamento atteso dall'utente, allo scopo di controllare che non si presentino bug o comportamenti imprevisti dell'applicazione.
+
+\section{Validazione}
+Lo scopo della validazione è accertare che il prodotto finale corrisponda alle attese, in modo da soddisfare tutti i requisiti prefissati inizialmente. I tipi di validazione effettuati sono stati due:
+\begin{itemize}
+    \item \textbf{validazione interna:} la validazione interna, chiamata anche "alfa test" o "pre-collaudo", è un processo che viene svolto da chi ha sviluppato il sistema. Al termine dello sviluppo del prodotto è stata effettuata la validazione interna in modo autonomo, simulando l'uso del prodotto da parte di un utente e verificando che tutte le funzionalità implementate funzionassero correttamente;
+    
+    \item \textbf{validazione esterna:} la validazione esterna, chiamata invece "beta-test" o "collaudo", è svolta dal committente del prodotto o dalla sua utenza. Il collaudo del prodotto sviluppato nel periodo di stage è stato fatto tramite una presentazione e dimostrazione dello stesso ai committenti.
+\end{itemize}
